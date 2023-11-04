@@ -1,0 +1,285 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<beans>
+    <property name="name" value="Presentation" />
+    <property name="desc" value="describe" />
+    <property name="version" value="V1" />
+    <property name="author" value="instdb" />
+    <!--Root node -->
+    <property name="root">
+        <group value="Basic information" desc="Basic information">
+            <list>
+                <bean>
+                    <property name="placeholder" value="Please select a community" />
+                    <property name="title" value="community" />
+                    <property name="type" value="select" />
+                    <property name="multiply" value="1:1" />
+                    <property name="iri" value="https://schema.org/DataCatalog" />
+                    <property name="options">
+                        <list>
+                            <bean>
+                                <property name="name" value="community1" />
+                                <property name="title" value="community1" />
+                            </bean>
+                            <bean>
+                                <property name="name" value="community2" />
+                                <property name="title" value="community2" />
+                            </bean>
+                            <bean>
+                                <property name="name" value="community3" />
+                                <property name="title" value="community3" />
+                            </bean>
+                        </list>
+                    </property>
+                </bean>
+                <bean>
+                    <property name="name" value="resourcesNameZh" />
+                    <property name="placeholder" value="Please fill in the Chinese resource name，Please fill in the Chinese resource name150Please fill in the Chinese resource name" />
+                    <property name="title" value="Resource Name（Resource Name）" />
+                    <property name="type" value="text" />
+                    <property name="check" value="^.{1,150}$" />
+                    <property name="multiply" value="1:1" />
+                    <property name="iri" value="https://schema.org/name" />
+                    <property name="language" value="zh" />
+                </bean>
+                <bean>
+                    <property name="name" value="resourcesNameEn" />
+                    <property name="title" value="Resource Name（Resource Name）" />
+                    <property name="placeholder" value="Please fill in the English resource name，Please fill in the English resource name300Please fill in the English resource name" />
+                    <property name="type" value="text" />
+                    <property name="check" value="^.{1,300}$" />
+                    <property name="multiply" value="1:1" />
+                    <property name="iri" value="https://schema.org/name" />
+                    <property name="language" value="en" />
+                </bean>
+                <bean>
+                    <property name="name" value="resourcesDescZh" />
+                    <property name="title" value="Resource Description（Resource Description）" />
+                    <property name="placeholder" value="Only Chinese resource descriptions can be filled in，Only Chinese resource descriptions can be filled in100Only Chinese resource descriptions can be filled in，300Only Chinese resource descriptions can be filled in" />
+                    <property name="type" value="textarea" />
+                    <property name="multiply" value="1:1" />
+                    <property name="iri" value="https://schema.org/description" />
+                    <property name="language" value="zh" />
+                </bean>
+                <bean>
+                    <property name="name" value="resourcesDescEn" />
+                    <property name="title" value="Resource Description（Resource Description）" />
+                    <property name="type" value="textarea" />
+                    <property name="multiply" value="0:1" />
+                    <property name="iri" value="https://schema.org/description" />
+                    <property name="language" value="en" />
+                    <property name="placeholder" value="Only English resource descriptions can be filled in，Only English resource descriptions can be filled in100Only English resource descriptions can be filled in，500Only English resource descriptions can be filled in" />
+                </bean>
+                <bean>
+                    <property name="name" value="image" />
+                    <property name="title" value="cover photo " />
+                    <property name="type" value="image" />
+                    <property name="multiply" value="1:1" />
+                    <property name="iri" value="https://schema.org/image" />
+                    <property name="placeholder" value="Size range800*600，Size range1MB" />
+                    <property name="check" value="*#800-*:600-*#0-1024" />
+                </bean>
+                <bean>
+                    <property name="name" value="keywordZh" />
+                    <property name="title" value="keyword（keyword）" />
+                    <property name="type" value="textTabMany" />
+                    <property name="multiply" value="1:3" />
+                    <property name="iri" value="https://schema.org/keywords" />
+                    <property name="language" value="zh" />
+                    <property name="tag" value="keywordZh" />
+                    <property name="placeholder" value="Please fill in Chinese keywords，Please fill in Chinese keywords，Please fill in Chinese keywords" />
+                </bean>
+                <bean>
+                    <property name="name" value="keywordEn" />
+                    <property name="title" value="keyword（keyword）" />
+                    <property name="type" value="textTabMany" />
+                    <property name="multiply" value="3:5" />
+                    <property name="iri" value="https://schema.org/keywords" />
+                    <property name="language" value="en" />
+                    <property name="tag" value="keywordEn" />
+                    <property name="placeholder" value="Please fill in English keywords，Please fill in English keywords，Please fill in English keywords" />
+                </bean>
+                <bean>
+                    <property name="name" value="author" />
+                    <property name="title" value="author" />
+                    <property name="type" value="author" />
+                    <property name="multiply" value="1:1" />
+                    <property name="iri" value="https://schema.org/author" />
+                    <property name="placeholder" value="Please enter a name to search for the author" />
+                </bean>
+                <bean>
+                    <property name="name" value="contributor" />
+                    <property name="title" value="Contributors" />
+                    <property name="type" value="author" />
+                    <property name="multiply" value="1:3" />
+                    <property name="iri" value="https://schema.org/contributor" />
+                    <property name="placeholder" value="Please enter a name to search for contributors" />
+                </bean>
+                <bean>
+                    <property name="name" value="subject" />
+                    <property name="title" value="subject" />
+                    <property name="type" value="subject" />
+                    <property name="multiply" value="1:3" />
+                    <property name="iri" value="http://purl.org/dc/terms/subject" />
+                    <property name="placeholder" value="Please select a discipline or enter a discipline name to search for，Please select a discipline or enter a discipline name to search for，Please select a discipline or enter a discipline name to search for" />
+                </bean>
+                <bean>
+                    <property name="name" value="DOI" />
+                    <property name="title" value="DOI" />
+                    <property name="type" value="DOI" />
+                    <property name="multiply" value="0:1" />
+                    <property name="iri" value="https://schema.org/doi" />
+                    <property name="placeholder" value="Please fill indoi" />
+                    <property name="formate" value="apply"/>
+                </bean>
+                <bean>
+                    <property name="name" value="CSTR" />
+                    <property name="title" value="CSTR" />
+                    <property name="type" value="CSTR" />
+                    <property name="multiply" value="0:1" />
+                    <property name="iri" value="https://schema.org/cstr" />
+                    <property name="placeholder" value="Please fill inCSTR" />
+                    <property name="formate" value="apply"/>
+                </bean>
+                <bean>
+                    <!-- Corresponding English -->
+                    <property name="name" value="licenseAgreement" />
+                    <property name="title" value="license agreement" />
+                    <property name="type" value="license" />
+                    <property name="multiply" value="1:1" />
+                    <property name="iri" value="https://schema.org/license" />
+                    <property name="placeholder" value="Please select a license agreement" />
+                </bean>
+            </list>
+        </group>
+        <group value="Open sharing of information" desc="Open sharing of information">
+            <list>
+                <bean>
+                    <property name="name" value="privacyPolicy" />
+                    <property name="title" value="Privacy Policy" />
+                    <property name="type" value="privacyPolicy" />
+                    <!--1:* 1To many To many   0:1 0To many1 To many  1:1 To many  -->
+                    <property name="multiply" value="1:1" />
+                    <!-- Corresponding group name Corresponding group name，Corresponding group name，Corresponding group name-->
+                    <property name="iri" value="https://schema.org/privacyPolicy" />
+                    <!--Child nodes -->
+                    <property name="options">
+                        <list>
+                            <bean>
+                                <property name="name" value="open" />
+                                <property name="title" value="Open" />
+                            </bean>
+                            <bean>
+                                <property name="name" value="protect"/>
+                                <property name="title" value="Protection period"/>
+                                <property name="children">
+                                    <list>
+                                        <bean>
+                                            <property name="name" value="openDate"/>
+                                            <property name="type" value="date"/>
+                                            <property name="formate" value="yyyy-MM-dd"/>
+                                            <property name="title" value="Opening date"/>
+                                        </bean>
+                                    </list>
+                                </property>
+                            </bean>
+                            <bean>
+                                <property name="name" value="condition" />
+                                <property name="title" value="Restricted Access" />
+                                <property name="children">
+                                    <list>
+                                        <bean>
+                                            <property name="name" value="condition" />
+                                            <property name="type" value="textarea" />
+                                            <property name="title" value="Access conditions" />
+                                        </bean>
+                                    </list>
+                                </property>
+                            </bean>
+                            <bean>
+                                <property name="name" value="notOpen" />
+                                <property name="title" value="Not open" />
+                                <property name="children">
+                                    <list>
+                                        <bean>
+                                            <property name="name" value="condition" />
+                                            <property name="type" value="textarea" />
+                                            <property name="title" value="Closed Description" />
+                                        </bean>
+                                    </list>
+                                </property>
+                            </bean>
+                        </list>
+                    </property>
+                </bean>
+                <bean>
+                    <!-- Corresponding English -->
+                    <property name="name" value="licenseAgreement" />
+                    <property name="title" value="license agreement" />
+                    <property name="type" value="license" />
+                    <property name="multiply" value="1:1" />
+                    <property name="iri" value="https://schema.org/license" />
+                    <property name="placeholder" value="Please select a license agreement" />
+                </bean>
+            </list>
+        </group>
+        <group value="Source Information" desc="Source Information">
+            <list>
+                <bean>
+                    <property name="title" value="Reprint source" />
+                    <property name="placeholder" value="The access address of the current resource's reprint source" />
+                    <property name="type" value="text" />
+                    <property name="multiply" value="0:1" />
+                    <property name="iri" value="https://schema.org/sameAs" />
+                </bean>
+                <bean>
+                    <property name="title" value="Reference Reference" />
+                    <property name="placeholder" value="Reference resources referenced or otherwise pointed to by data resources，Reference resources referenced or otherwise pointed to by data resources，Reference resources referenced or otherwise pointed to by data resources，Reference resources referenced or otherwise pointed to by data resourcesop'" />
+                    <property name="type" value="text" />
+                    <property name="multiply" value="0:1" />
+                    <property name="iri" value="https://schema.org/references" />
+                </bean>
+                <bean>
+                    <property name="title" value="Data processing process" />
+                    <property name="placeholder" value="About Data Production、About Data Production" />
+                    <property name="type" value="textarea" />
+                    <property name="multiply" value="0:1" />
+                    <property name="iri" value="https://schema.org/processingDescription" />
+                </bean>
+                <bean>
+                    <property name="title" value="Data processing equipment" />
+                    <property name="placeholder" value="Description of the instruments and devices used to prepare or maintain the dataset" />
+                    <property name="type" value="textarea" />
+                    <property name="multiply" value="0:1" />
+                    <property name="iri" value="https://schema.org/Equipment" />
+                </bean>
+                <bean>
+                    <property name="title" value="Referenced" />
+                    <property name="placeholder" value="Referencing or otherwise pointing to related resources of data resources，Referencing or otherwise pointing to related resources of data resources，Referencing or otherwise pointing to related resources of data resources" />
+                    <property name="type" value="text" />
+                    <property name="multiply" value="0:1" />
+                    <property name="iri" value="https://schema.org/isReferencedBy" />
+                </bean>
+            </list>
+        </group>
+        <group value="Project paper" desc="Project paper">
+            <list>
+                <bean>
+                    <property name="title" value="Funded projects" />
+                    <property name="type" value="project" />
+                    <property name="multiply" value="1:3" />
+                    <property name="iri" value="https://schema.org/fundingReferences" />
+                    <property name="placeholder" value="Please enter a name to search for sponsored projects" />
+                </bean>
+                <bean>
+                    <!-- Corresponding English -->
+                    <property name="name" value="paper" />
+                    <property name="title" value="paper" />
+                    <property name="type" value="paper" />
+                    <property name="multiply" value="1:2" />
+                    <property name="iri" value="https://schema.org/paper" />
+                    <property name="placeholder" value="Please enter a name to search for a paper" />
+                </bean>
+            </list>
+        </group>
+    </property>
+</beans>

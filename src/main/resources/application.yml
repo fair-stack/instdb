@@ -1,0 +1,47 @@
+server:
+  port: 8787
+  servlet:
+    session:
+      timeout: 7200
+spring:
+  profiles:  
+    active: dev
+  application:
+    name: instdb
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  servlet:
+    multipart:
+      max-file-size: 800MB
+      max-request-size: 800MB
+  messages:
+    basename: i18n.messages
+    encoding: UTF-8
+    cache-duration: 3600
+jwt:
+  header: Authorization
+  token_expires: 72000 # 3h
+  secret:
+  refresh_token_expires: 3600 # 60 minutes
+ftp:
+  #host: 127.0.0.1
+  port: 2121
+  port1: 2121
+  timeOut: 7200000
+  bufferSize: 5120
+call:
+  casLoginUrl:
+  casLogoutUrl:
+  authUrl:
+  authParam:
+  wechatCallbackUrl:
+  escienceCallbackUrl:
+  #cas
+  casCallbackUrl:
+  wechatBindingUrl:
+  wechatConfUrl:
+acc:
+    host: 127.0.0.1
+    ftpHost:
+    port: 81

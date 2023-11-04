@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>mail</title>
+</head>
+<body>
+<div>Email activation</div>
+<div>Your registration information is：</div>
+<table border="1">
+    <tr>
+        <td>user name：</td>
+        <td th:text="${username}"></td>
+    </tr>
+    <tr>
+        <td>User Gender：</td>
+        <td th:text="${gender}"></td>
+    </tr>
+</table>
+</body>
+</html>

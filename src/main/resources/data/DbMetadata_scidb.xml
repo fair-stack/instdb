@@ -1,0 +1,266 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<beans>
+	<property name="name" value="scidbTemplate"/>
+	<property name="desc" value="Dataset metadata standards"/>
+	<property name="version" value="V1"/>
+	<property name="author" value="scidb"/>
+	<!--Root node -->
+	<property name="root">
+		<group value="Basic information" desc="Basic information">
+			<list>
+				<bean>
+					<property name="name" value="resourcesNameZh"/>
+					<property name="title" value="Dataset Chinese Title"/>
+					<property name="type" value="text"/>
+					<property name="multiply" value="1:1"/>
+					<property name="iri" value="https://schema.org/name"/>
+					<property name="language" value="zh"/>
+					<property name="check" value="^.{1,150}$"/>
+				</bean>
+				<bean>
+					<property name="name" value="resourcesNameEn"/>
+					<property name="title" value="Dataset English Title"/>
+					<property name="type" value="text"/>
+					<property name="multiply" value="1:1"/>
+					<property name="iri" value="https://schema.org/name"/>
+					<property name="language" value="en"/>
+				</bean>
+				<bean>
+					<property name="name" value="resourcesDescZh"/>
+					<property name="title" value="Introduction in Chinese"/>
+					<property name="type" value="textarea"/>
+					<property name="multiply" value="1:1"/>
+					<property name="iri" value="https://schema.org/description"/>
+					<property name="language" value="zh"/>
+				</bean>
+				<bean>
+					<property name="name" value="resourcesDescEn"/>
+					<property name="title" value="English Introduction"/>
+					<property name="type" value="textarea"/>
+					<property name="multiply" value="1:1"/>
+					<property name="iri" value="https://schema.org/description"/>
+					<property name="language" value="en"/>
+				</bean>
+				<bean>
+					<property name="name" value="keywordZh"/>
+					<property name="title" value="Chinese keywords"/>
+					<property name="type" value="textTabMany"/>
+					<property name="multiply" value="1:*"/>
+					<property name="iri" value="https://schema.org/keywords"/>
+					<property name="language" value="zh"/>
+				</bean>
+				<bean>
+					<property name="name" value="keywordEn"/>
+					<property name="title" value="English keywords"/>
+					<property name="type" value="textTabMany"/>
+					<property name="multiply" value="1:*"/>
+					<property name="iri" value="https://schema.org/keywords"/>
+					<property name="language" value="en"/>
+				</bean>
+				<bean>
+					<property name="name" value="author"/>
+					<property name="title" value="author"/>
+					<property name="type" value="author"/>
+					<property name="multiply" value="1:*"/>
+					<property name="iri" value="https://schema.org/author"/>
+					<property name="placeholder" value="Please enter a name to search for the author"/>
+				</bean>
+				<bean>
+					<property name="name" value="correspondingAuthor"/>
+					<property name="title" value="Corresponding author email"/>
+					<property name="placeholder" value="Please enter the email address of the selected author"/>
+					<property name="type" value="text"/>
+					<property name="multiply" value="1:1"/>
+					<property name="check" value="^([a-z0-9A-Z]+[-|\.]?)+[a-z0-9A-Z]@([a-z0-9A-Z]+(-[a-z0-9A-Z]+)?\.)+[a-zA-Z]{2,}$"/>
+					<property name="iri" value="https://schema.org/correspondingAuthor"/>
+				</bean>
+				<bean>
+					<property name="name" value="subject"/>
+					<property name="title" value="subject"/>
+					<property name="type" value="subject"/>
+					<property name="multiply" value="1:*"/>
+					<property name="iri" value="http://purl.org/dc/terms/subject"/>
+					<property name="placeholder" value="Please select a discipline or enter a discipline name to search for"/>
+				</bean>
+				<bean>
+					<property name="name" value="privacyPolicy"/>
+					<property name="title" value="Privacy Policy"/>
+					<property name="type" value="privacyPolicy"/>
+					<property name="multiply" value="1:1"/>
+					<property name="iri" value="https://schema.org/privacyPolicy"/>
+					<!--Child nodes -->
+					<property name="options">
+						<list>
+							<bean>
+								<property name="name" value="PUBLIC"/>
+								<property name="title" value="Open"/>
+							</bean>
+							<bean>
+								<property name="name" value="EMBARGO"/>
+								<property name="title" value="Protection period"/>
+								<property name="children">
+									<list>
+										<bean>
+											<property name="name" value="protectMonth"/>
+											<property name="title" value="Set protection period(Set protection period)"/>
+											<!-- iconurl -->
+											<property name="type" value="select"/>
+											<!--Child nodes -->
+											<property name="options">
+												<list>
+													<bean>
+														<property name="name" value="1"/>
+														<property name="title" value="1"/>
+													</bean>
+													<bean>
+														<property name="name" value="2"/>
+														<property name="title" value="2"/>
+													</bean>
+													<bean>
+														<property name="name" value="3"/>
+														<property name="title" value="3"/>
+													</bean>
+													<bean>
+														<property name="name" value="4"/>
+														<property name="title" value="4"/>
+													</bean>
+													<bean>
+														<property name="name" value="5"/>
+														<property name="title" value="5"/>
+													</bean>
+													<bean>
+														<property name="name" value="6"/>
+														<property name="title" value="6"/>
+													</bean>
+													<bean>
+														<property name="name" value="7"/>
+														<property name="title" value="7"/>
+													</bean>
+													<bean>
+														<property name="name" value="8"/>
+														<property name="title" value="8"/>
+													</bean>
+													<bean>
+														<property name="name" value="9"/>
+														<property name="title" value="9"/>
+													</bean>
+													<bean>
+														<property name="name" value="10"/>
+														<property name="title" value="10"/>
+													</bean>
+													<bean>
+														<property name="name" value="11"/>
+														<property name="title" value="12"/>
+													</bean>
+													<bean>
+														<property name="name" value="12"/>
+														<property name="title" value="12"/>
+													</bean>
+												</list>
+											</property>
+										</bean>
+									</list>
+								</property>
+							</bean>
+						</list>
+					</property>
+				</bean>
+				<bean>
+					<property name="name" value="image"/>
+					<property name="title" value="Dataset Cover"/>
+					<property name="type" value="image"/>
+					<property name="multiply" value="1:1"/>
+					<property name="iri" value="https://schema.org/image"/>
+					<property name="placeholder" value="The resolution of the cover image should be greater than400×300The resolution of the cover image should be greater than，The resolution of the cover image should be greater than512KB"/>
+					<property name="check" value="*#400-*:300-*#0-512"/>
+				</bean>
+				<bean>
+					<property name="name" value="fileType"/>
+					<property name="placeholder" value="Please select a dataset file type"/>
+					<property name="title" value="Dataset File Type"/>
+					<property name="type" value="select"/>
+					<property name="multiply" value="1:1"/>
+					<property name="iri" value="https://schema.org/fileType"/>
+					<property name="options">
+						<list>
+							<bean>
+								<property name="name" value="001"/>
+								<property name="title" value="data set/data set"/>
+							</bean>
+							<bean>
+								<property name="name" value="002"/>
+								<property name="title" value="Paper Chart"/>
+							</bean>
+							<bean>
+								<property name="name" value="003"/>
+								<property name="title" value="Multimedia data"/>
+							</bean>
+							<bean>
+								<property name="name" value="004"/>
+								<property name="title" value="Code data"/>
+							</bean>
+
+							<bean>
+								<property name="name" value="005"/>
+								<property name="title" value="slide"/>
+							</bean>
+						</list>
+					</property>
+				</bean>
+
+				<bean>
+					<property name="placeholder" value="Please select a dataset language"/>
+					<property name="title" value="Dataset Language"/>
+					<property name="type" value="select"/>
+					<property name="multiply" value="1:1"/>
+					<property name="iri" value="https://schema.org/language"/>
+					<property name="options">
+						<list>
+							<bean>
+								<property name="name" value="zh_CN"/>
+								<property name="title" value="Chinese"/>
+							</bean>
+							<bean>
+								<property name="name" value="en_US"/>
+								<property name="title" value="English"/>
+							</bean>
+
+						</list>
+					</property>
+				</bean>
+
+				<bean>
+					<property name="title" value="Data reference information"/>
+					<property name="type" value="textMany"/>
+					<property name="multiply" value="1:3"/>
+					<property name="iri" value="https://schema.org/citation"/>
+					<property name="placeholder" value="Please add three data reference information,Please add three data reference information，Please add three data reference information150Please add three data reference information"/>
+					<property name="check" value="^.{1,150}$"/>
+				</bean>
+				<bean>
+					<!-- Corresponding English -->
+					<property name="name" value="licenseAgreement"/>
+					<property name="title" value="license agreement"/>
+					<property name="type" value="license"/>
+					<property name="multiply" value="1:1"/>
+					<property name="iri" value="https://schema.org/license"/>
+					<property name="placeholder" value="Please select a license agreement"/>
+				</bean>
+
+			</list>
+		</group>
+		<group value="Related Papers" desc="Related Papers">
+			<list>
+				<bean>
+					<property name="name" value="paper"/>
+					<property name="title" value="paper"/>
+					<property name="type" value="paper"/>
+					<property name="multiply" value="1:*"/>
+					<property name="iri" value="https://schema.org/paper"/>
+					<property name="placeholder" value="Please enter a name to search for a paper"/>
+				</bean>
+
+			</list>
+		</group>
+	</property>
+</beans>

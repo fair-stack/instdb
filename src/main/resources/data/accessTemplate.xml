@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<beans>
+    <property name="name" value="Request Access Template"/>
+    <property name="desc" value="Request Access Template"/>
+    <property name="version" value="V1"/>
+    <property name="author" value="instdb"/>
+    <!--Root node -->
+    <property name="root">
+        <group value="Basic information" desc="Basic information">
+            <list>
+                <bean>
+                    <!-- Corresponding English -->
+                    <property name="title" value="Visit duration"/>
+                    <property name="type" value="startDate"/>
+                    <property name="formate" value="yyyy-MM-dd"/>
+                    <property name="multiply" value="1:1"/>
+                    <property name="placeholder" value="Please select the visit period"/>
+                </bean>
+                <bean>
+                    <property name="placeholder" value="Please enter the application purpose"/>
+                    <property name="title" value="Application purpose"/>
+                    <property name="type" value="text"/>
+                    <property name="multiply" value="1:1"/>
+                    <property name="name" value="title"/>
+                </bean>
+                <bean>
+                    <property name="title" value="elaborate on"/>
+                    <property name="placeholder"
+                              value="Please provide a detailed explanation of the purpose of use"/>
+                    <property name="type" value="textarea"/>
+                    <property name="multiply" value="1:1"/>
+                    <property name="language" value="zh"/>
+                </bean>
+<!--                <bean>-->
+<!--                    <property name="name" value="standardType"/>-->
+<!--                    <property name="placeholder" value="Please select a data standard"/>-->
+<!--                    <property name="title" value="Data standards"/>-->
+<!--                    <property name="type" value="select"/>-->
+<!--                    <property name="multiply" value="1:1"/>-->
+<!--                    <property name="options">-->
+<!--                        <list>-->
+<!--                            <bean>-->
+<!--                                <property name="name" value="national standards"/>-->
+<!--                                <property name="title" value="national standards"/>-->
+<!--                            </bean>-->
+<!--                            <bean>-->
+<!--                                <property name="name" value="Group standards"/>-->
+<!--                                <property name="title" value="Group standards"/>-->
+<!--                            </bean>-->
+<!--                            <bean>-->
+<!--                                <property name="name" value="Industry standards"/>-->
+<!--                                <property name="title" value="Industry standards"/>-->
+<!--                                <property name="children">-->
+<!--                                    <list>-->
+<!--                                        <bean>-->
+<!--                                            <property name="name" value="condition"/>-->
+<!--                                            <property name="type" value="textarea"/>-->
+<!--                                            <property name="placeholder" value="Please fill in an industry"/>-->
+<!--                                            <property name="title" value="Industry"/>-->
+<!--                                        </bean>-->
+<!--                                    </list>-->
+<!--                                </property>-->
+<!--                            </bean>-->
+<!--                            <bean>-->
+<!--                                <property name="name" value="Project Standards"/>-->
+<!--                                <property name="title" value="Project Standards"/>-->
+<!--                            </bean>-->
+<!--                            <bean>-->
+<!--                                <property name="name" value="other"/>-->
+<!--                                <property name="title" value="other"/>-->
+<!--                            </bean>-->
+<!--                        </list>-->
+<!--                    </property>-->
+<!--                </bean>-->
+<!--                <bean>-->
+<!--                    &lt;!&ndash; Corresponding English &ndash;&gt;-->
+<!--                    <property name="name" value="datePublished"/>-->
+<!--                    <property name="title" value="Application date"/>-->
+<!--                    <property name="type" value="date"/>-->
+<!--                    <property name="formate" value="yyyy-MM-dd"/>-->
+<!--                    <property name="multiply" value="1:1"/>-->
+<!--                    <property name="placeholder" value="Please select the authorization date"/>-->
+<!--                </bean>-->
+            </list>
+        </group>
+    </property>
+</beans>

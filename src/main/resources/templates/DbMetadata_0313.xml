@@ -1,0 +1,281 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<beans>
+    <property name="name" value="Dataset type achievement data submission information"/>
+    <property name="desc" value="Dataset type achievement data submission information"/>
+    <property name="version" value="V1"/>
+    <property name="author" value="instdb"/>
+    <property name="root">
+        <group value="Basic information" desc="Basic information">
+            <list>
+                <bean>
+                    <property name="placeholder" value="Please fill in the dataset serial number"/>
+                    <property name="title" value="Serial number"/>
+                    <property name="type" value="text"/>
+                    <property name="multiply" value="0:1"/>
+                    <property name="iri" value="https://schema.org/orderNumber"/>
+                </bean>
+                <bean>
+                    <property name="placeholder" value="Please fill in the dataset number"/>
+                    <property name="title" value="Dataset number"/>
+                    <property name="type" value="text"/>
+                    <property name="multiply" value="1:1"/>
+                    <property name="iri" value="https://schema.org/relatedDataset"/>
+                </bean>
+                <bean>
+                    <property name="placeholder" value="Please fill in the name of the data integration result"/>
+                    <property name="title" value="Dataset Name"/>
+                    <property name="type" value="text"/>
+                    <property name="multiply" value="1:1"/>
+                    <property name="iri" value="https://schema.org/name"/>
+                    <property name="language" value="zh"/>
+                </bean>
+                <bean>
+                    <property name="placeholder" value="Please select a dataset type"/>
+                    <property name="title" value="Dataset Type"/>
+                    <property name="type" value="select"/>
+                    <property name="multiply" value="1:1"/>
+                    <property name="iri" value="https://schema.org/datasetType"/>
+                    <property name="options">
+                        <list>
+                            <bean>
+                                <property name="name" value="Training dataset"/>
+                                <property name="title" value="Training dataset"/>
+                            </bean>
+                            <bean>
+                                <property name="name" value="Simulation Dataset"/>
+                                <property name="title" value="Simulation Dataset"/>
+                            </bean>
+                            <bean>
+                                <property name="name" value="Experimental dataset"/>
+                                <property name="title" value="Experimental dataset"/>
+                            </bean>
+                            <bean>
+                                <property name="name" value="Other datasets"/>
+                                <property name="title" value="Other datasets"/>
+                            </bean>
+                        </list>
+                    </property>
+                </bean>
+                <bean>
+                    <property name="title" value="Dataset keywords"/>
+                    <property name="type" value="textTabMany"/>
+                    <property name="multiply" value="1:*"/>
+                    <property name="iri" value="https://schema.org/keywords"/>
+                    <property name="language" value="zh"/>
+                    <property name="placeholder" value="Please fill in the keywords for the dataset"/>
+                </bean>
+                <bean>
+                    <property name="placeholder" value="Please select the dataset security level"/>
+                    <property name="title" value="Dataset security level"/>
+                    <property name="type" value="select"/>
+                    <property name="multiply" value="1:1"/>
+                    <property name="iri" value="https://schema.org/classification"/>
+                    <property name="options">
+                        <list>
+                            <bean>
+                                <property name="name" value="JM"/>
+                                <property name="title" value="JM"/>
+                            </bean>
+                            <bean>
+                                <property name="name" value="MM"/>
+                                <property name="title" value="MM"/>
+                            </bean>
+                            <bean>
+                                <property name="name" value="open"/>
+                                <property name="title" value="open"/>
+                            </bean>
+                        </list>
+                    </property>
+                </bean>
+                <bean>
+                    <property name="placeholder" value="Please select the level of authorization openness for the dataset"/>
+                    <property name="title" value="Degree of openness of dataset authorization"/>
+                    <property name="type" value="select"/>
+                    <property name="multiply" value="1:1"/>
+                    <property name="iri" value="https://schema.org/authorizationOpenness"/>
+                    <property name="options">
+                        <list>
+                            <bean>
+                                <property name="name" value="Ilevel"/>
+                                <property name="title" value="Ilevel"/>
+                            </bean>
+                            <bean>
+                                <property name="name" value="IIlevel"/>
+                                <property name="title" value="IIlevel"/>
+                            </bean>
+                            <bean>
+                                <property name="name" value="IIIlevel"/>
+                                <property name="title" value="IIIlevel"/>
+                            </bean>
+                        </list>
+                    </property>
+                </bean>
+                <bean>
+                    <property name="title" value="Dataset Description"/>
+                    <property name="placeholder" value="Fill in the purpose of the dataset in this day、Fill in the purpose of the dataset in this day"/>
+                    <property name="type" value="textarea"/>
+                    <property name="multiply" value="1:1"/>
+                    <property name="iri" value="https://schema.org/description"/>
+                    <property name="language" value="zh"/>
+                </bean>
+                <bean>
+                    <property name="title" value="Description of the hardware environment required for the dataset"/>
+                    <property name="placeholder" value="asX86、ARM as、as、CPUas、GPUas、as、SSD、as"/>
+                    <property name="type" value="textarea"/>
+                    <property name="multiply" value="1:1"/>
+                    <property name="iri" value="https://schema.org/availableOnDevice"/>
+                    <property name="language" value="zh"/>
+                </bean>
+                <bean>
+                    <property name="title" value="Description of the software environment required for the dataset"/>
+                    <property name="placeholder" value="Software environments such as operating systems"/>
+                    <property name="type" value="textarea"/>
+                    <property name="multiply" value="0:1"/>
+                    <property name="iri" value="https://schema.org/softwareRequirements"/>
+                    <property name="language" value="zh"/>
+                </bean>
+                <bean>
+                    <property name="title" value="Dataset Management Software Description"/>
+                    <property name="placeholder" value="Please fill in the dataset management software"/>
+                    <property name="type" value="textarea"/>
+                    <property name="multiply" value="0:1"/>
+                    <property name="iri" value="https://schema.org/softwareHelp"/>
+                    <property name="language" value="zh"/>
+                </bean>
+                <bean>
+                    <property name="title" value="Does it contain a data dictionary"/>
+                    <property name="placeholder" value="Does the accompanying delivery include dictionary information(Does the accompanying delivery include dictionary information、Does the accompanying delivery include dictionary information)"/>
+                    <property name="type" value="select"/>
+                    <property name="multiply" value="1:1"/>
+                    <property name="iri" value="https://schema.org/isDictionary"/>
+                    <property name="options">
+                        <list>
+                            <bean>
+                                <property name="name" value="have"/>
+                                <property name="title" value="have"/>
+                            </bean>
+                            <bean>
+                                <property name="name" value="nothing"/>
+                                <property name="title" value="nothing"/>
+                            </bean>
+                        </list>
+                    </property>
+                </bean>
+                <bean>
+                    <property name="title" value="Does it contain annotation files"/>
+                    <property name="placeholder" value="Is there a label file included in the supporting deliverables(Is there a label file included in the supporting deliverables、Is there a label file included in the supporting deliverables)"/>
+                    <property name="type" value="select"/>
+                    <property name="multiply" value="1:1"/>
+                    <property name="iri" value="https://schema.org/isFileAnnotation"/>
+                    <property name="options">
+                        <list>
+                            <bean>
+                                <property name="name" value="have"/>
+                                <property name="title" value="have"/>
+                            </bean>
+                            <bean>
+                                <property name="name" value="nothing"/>
+                                <property name="title" value="nothing"/>
+                            </bean>
+                        </list>
+                    </property>
+                </bean>
+                <bean>
+                    <property name="title" value="Does it contain any other supporting documents"/>
+                    <property name="type" value="textarea"/>
+                    <property name="multiply" value="0:1"/>
+                    <property name="iri" value="https://schema.org/supportingDocuments"/>
+                    <property name="placeholder" value="Does the supporting delivery include any additional explanatory documents other than data dictionaries and labels"/>
+                </bean>
+                <bean>
+                    <property name="title" value="Associate datasets with other dataset information"/>
+                    <property name="type" value="textarea"/>
+                    <property name="multiply" value="1:1"/>
+                    <property name="iri" value="https://schema.org/datasetAssociation"/>
+                    <property name="placeholder" value="Please fill in the numbers and names of other datasets associated with this dataset，Please fill in the numbers and names of other datasets associated with this dataset"/>
+                </bean>
+                <bean>
+                    <property name="title" value="Dataset associated deliverables information"/>
+                    <property name="type" value="textarea"/>
+                    <property name="multiply" value="1:1"/>
+                    <property name="iri" value="https://schema.org/deliverablesAssociation"/>
+                    <property name="placeholder" value="Please fill in the numbers and names of other deliverables associated with this dataset，Please fill in the numbers and names of other deliverables associated with this dataset"/>
+                </bean>
+                <bean>
+                    <property name="title" value="application area "/>
+                    <property name="type" value="text"/>
+                    <property name="multiply" value="0:1"/>
+                    <property name="iri" value="https://schema.org/applicationArea"/>
+                    <property name="placeholder" value="Please fill in the dataset and the application field that combines the related results"/>
+                </bean>
+                <bean>
+                    <property name="title" value="Application Type"/>
+                    <property name="type" value="text"/>
+                    <property name="multiply" value="1:1"/>
+                    <property name="iri" value="https://schema.org/applicationType"/>
+                    <property name="placeholder" value="Please fill in the dataset application type"/>
+                </bean>
+                <bean>
+                    <property name="title" value="Quality review form"/>
+                    <property name="type" value="textarea"/>
+                    <property name="multiply" value="0:1"/>
+                    <property name="iri" value="https://schema.org/reviewForm"/>
+                    <property name="placeholder" value="Algorithm dataset needs to be reviewed，Algorithm dataset needs to be reviewed"/>
+                </bean>
+            </list>
+        </group>
+        <group value="Expand information" desc="Expand information">
+            <list>
+                <bean>
+                    <property name="title" value="Dataset version number"/>
+                    <property name="type" value="text"/>
+                    <property name="multiply" value="1:1"/>
+                    <property name="iri" value="https://schema.org/versionNumber"/>
+                    <property name="placeholder" value="Please fill in the dataset version number"/>
+                </bean>
+                <bean>
+                    <property name="title" value="Name of responsible person"/>
+                    <property name="type" value="text"/>
+                    <property name="multiply" value="1:1"/>
+                    <property name="iri" value="https://schema.org/responsibleName"/>
+                    <property name="placeholder" value="Please fill in the name of the responsible person"/>
+                </bean>
+                <bean>
+                    <property name="title" value="Contact information of responsible person"/>
+                    <property name="type" value="text"/>
+                    <property name="multiply" value="1:1"/>
+                    <property name="iri" value="https://schema.org/responsiblePhone"/>
+                    <property name="placeholder" value="Please fill in the contact phone number of the responsible person"/>
+                </bean>
+                <bean>
+                    <property name="title" value="Potential application scenarios"/>
+                    <property name="type" value="textarea"/>
+                    <property name="multiply" value="0:1"/>
+                    <property name="iri" value="https://schema.org/applicationScenario"/>
+                    <property name="placeholder" value="Please fill in other potential application scenarios for this dataset"/>
+                </bean>
+                <bean>
+                    <property name="title" value="Potential Utilization Value"/>
+                    <property name="type" value="textarea"/>
+                    <property name="multiply" value="0:1"/>
+                    <property name="iri" value="https://schema.org/utilizationValue"/>
+                    <property name="placeholder" value="Please fill in the potential utilization value of this dataset"/>
+                </bean>
+                <bean>
+                    <property name="title" value="Data quality self-assessment"/>
+                    <property name="type" value="textarea"/>
+                    <property name="multiply" value="0:1"/>
+                    <property name="iri" value="https://schema.org/qualityEvaluation"/>
+                    <property name="placeholder" value="Please provide an evaluation of data quality based on potential utilization value"/>
+                </bean>
+                <bean>
+                    <property name="title" value="Data Reuse Recommendation"/>
+                    <property name="type" value="textarea"/>
+                    <property name="multiply" value="0:1"/>
+                    <property name="iri" value="https://schema.org/reuseRecommendation"/>
+                    <property name="placeholder" value="Please fill in the information based on the condition of the data during use，Please fill in the information based on the condition of the data during use"/>
+                </bean>
+            </list>
+        </group>
+    </property>
+</beans>

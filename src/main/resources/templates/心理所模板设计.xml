@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<beans>
+    <property name="name" value="Psychological Institute Dataset"/>
+    <property name="desc" value="Psychological Institute Students Using Templates"/>
+    <property name="version" value="V1"/>
+    <property name="author" value="instdb"/>
+    <!--Root node -->
+    <property name="root">
+        <group value="personal information" desc="personal information">
+            <list>
+                <bean>
+                    <property name="placeholder" value="Please fill in your name"/>
+                    <property name="title" value="name"/>
+                    <property name="type" value="text"/>
+                    <property name="multiply" value="1:1"/>
+                    <property name="iri" value="https://schema.org/studentName"/>
+                    <property name="language" value="zh"/>
+                </bean>
+                <bean>
+                    <property name="placeholder" value="Please fill in the student ID"/>
+                    <property name="title" value="Student ID"/>
+                    <property name="type" value="text"/>
+                    <property name="multiply" value="1:1"/>
+                    <property name="iri" value="https://schema.org/studentId"/>
+                    <property name="language" value="zh"/>
+                </bean>
+                <bean>
+                    <property name="placeholder" value="Please fill in the training unit"/>
+                    <property name="title" value="Training unit"/>
+                    <property name="type" value="text"/>
+                    <property name="multiply" value="1:1"/>
+                    <property name="iri" value="https://schema.org/trainingUnit"/>
+                    <property name="language" value="zh"/>
+                </bean>
+                <bean>
+                    <property name="name" value="trainingLevel"/>
+                    <property name="placeholder" value="Please select the training level"/>
+                    <property name="title" value="Cultivation level"/>
+                    <property name="type" value="select"/>
+                    <property name="multiply" value="1:1"/>
+                    <property name="iri" value="https://schema.org/trainingLevel"/>
+                    <property name="language" value="zh"/>
+                    <property name="options">
+                        <list>
+                            <bean>
+                                <property name="name" value="Master's degree students"/>
+                                <property name="title" value="Master's degree students"/>
+                            </bean>
+                            <bean>
+                                <property name="name" value="Doctoral students"/>
+                                <property name="title" value="Doctoral students"/>
+                            </bean>
+                        </list>
+                    </property>
+                </bean>
+                <bean>
+                    <property name="name" value="degreeType"/>
+                    <property name="placeholder" value="Please select the degree type"/>
+                    <property name="title" value="Degree Type"/>
+                    <property name="type" value="select"/>
+                    <property name="multiply" value="1:1"/>
+                    <property name="iri" value="https://schema.org/degreeType"/>
+                    <property name="language" value="zh"/>
+                    <property name="options">
+                        <list>
+                            <bean>
+                                <property name="name" value="Academic type"/>
+                                <property name="title" value="Academic type"/>
+                            </bean>
+                            <bean>
+                                <property name="name" value="Professional"/>
+                                <property name="title" value="Professional"/>
+                            </bean>
+                        </list>
+                    </property>
+                </bean>
+                <bean>
+                    <property name="name" value="learnStyle"/>
+                    <property name="placeholder" value="Please choose a learning method"/>
+                    <property name="title" value="learning style"/>
+                    <property name="type" value="select"/>
+                    <property name="multiply" value="1:1"/>
+                    <property name="iri" value="https://schema.org/learnStyle"/>
+                    <property name="language" value="zh"/>
+                    <property name="options">
+                        <list>
+                            <bean>
+                                <property name="name" value="Full time out of work reading"/>
+                                <property name="title" value="Full time out of work reading"/>
+                            </bean>
+                            <bean>
+                                <property name="name" value="Part time non production"/>
+                                <property name="title" value="Part time non production"/>
+                            </bean>
+                            <bean>
+                                <property name="name" value="Equal academic strength"/>
+                                <property name="title" value="Equal academic strength"/>
+                            </bean>
+                        </list>
+                    </property>
+                </bean>
+                <bean>
+                    <property name="name" value="major"/>
+                    <property name="placeholder" value="Please select a major"/>
+                    <property name="title" value="major"/>
+                    <property name="type" value="select"/>
+                    <property name="multiply" value="1:1"/>
+                    <property name="iri" value="https://schema.org/major"/>
+                    <property name="language" value="zh"/>
+                    <property name="options">
+                        <list>
+                            <bean>
+                                <property name="name" value="Basic Psychology"/>
+                                <property name="title" value="Basic Psychology"/>
+                            </bean>
+                            <bean>
+                                <property name="name" value="Development and Educational Psychology"/>
+                                <property name="title" value="Development and Educational Psychology"/>
+                            </bean>
+                            <bean>
+                                <property name="name" value="Applied Psychology"/>
+                                <property name="title" value="Applied Psychology"/>
+                            </bean>
+                            <bean>
+                                <property name="name" value="Cognitive Neuroscience"/>
+                                <property name="title" value="Cognitive Neuroscience"/>
+                            </bean>
+                            <bean>
+                                <property name="name" value="Health Psychology"/>
+                                <property name="title" value="Health Psychology"/>
+                            </bean>
+                        </list>
+                    </property>
+                </bean>
+                <bean>
+                    <property name="placeholder" value="Please fill in the year of enrollment"/>
+                    <property name="title" value="Year of entry"/>
+                    <property name="type" value="text"/>
+                    <property name="multiply" value="1:1"/>
+                    <property name="iri" value="https://schema.org/startYear"/>
+                    <property name="language" value="zh"/>
+                </bean>
+                <bean>
+                    <property name="placeholder" value="Please fill in the graduation year"/>
+                    <property name="title" value="Graduation Year"/>
+                    <property name="type" value="text"/>
+                    <property name="multiply" value="1:1"/>
+                    <property name="iri" value="https://schema.org/endYear"/>
+                    <property name="language" value="zh"/>
+                </bean>
+                <bean>
+                    <property name="placeholder" value="Please fill in the first mentor"/>
+                    <property name="title" value="First mentor"/>
+                    <property name="type" value="text"/>
+                    <property name="multiply" value="1:1"/>
+                    <property name="iri" value="https://schema.org/firstTutor"/>
+                    <property name="language" value="zh"/>
+                </bean>
+                <bean>
+                    <property name="placeholder" value="Please fill in the email address of the first mentor"/>
+                    <property name="title" value="First mentor email"/>
+                    <property name="type" value="text"/>
+                    <property name="multiply" value="1:1"/>
+                    <property name="iri" value="https://schema.org/firstTutorEmail"/>
+                    <property name="language" value="zh"/>
+                </bean>
+                <bean>
+                    <property name="placeholder" value="Please fill in the second supervisor"/>
+                    <property name="title" value="Second mentor"/>
+                    <property name="type" value="text"/>
+                    <property name="multiply" value="0:1"/>
+                    <property name="iri" value="https://schema.org/twoTutor"/>
+                    <property name="language" value="zh"/>
+                </bean>
+                <bean>
+                    <property name="placeholder" value="Please fill in the email address of the second supervisor"/>
+                    <property name="title" value="Second mentor email"/>
+                    <property name="type" value="text"/>
+                    <property name="multiply" value="0:1"/>
+                    <property name="iri" value="https://schema.org/twoTutorEmail"/>
+                    <property name="language" value="zh"/>
+                </bean>
+                <bean>
+                    <property name="placeholder" value="Please fill in the third supervisor"/>
+                    <property name="title" value="Third mentor"/>
+                    <property name="type" value="text"/>
+                    <property name="multiply" value="0:1"/>
+                    <property name="iri" value="https://schema.org/thirdTutor"/>
+                    <property name="language" value="zh"/>
+                </bean>
+                <bean>
+                    <property name="placeholder" value="Please fill in the email address of the third mentor"/>
+                    <property name="title" value="Third mentor email"/>
+                    <property name="type" value="text"/>
+                    <property name="multiply" value="0:1"/>
+                    <property name="iri" value="https://schema.org/thirdTutorEmail"/>
+                    <property name="language" value="zh"/>
+                </bean>
+            </list>
+        </group>
+        <group value="Paper Information" desc="Paper Information">
+            <list>
+                <bean>
+                    <property name="placeholder" value="Please fill in the Chinese title of the paper"/>
+                    <property name="title" value="Chinese title of the paper"/>
+                    <property name="type" value="text"/>
+                    <property name="multiply" value="1:1"/>
+                    <property name="iri" value="https://schema.org/paperName"/>
+                    <property name="language" value="zh"/>
+                </bean>
+                <bean>
+                    <property name="placeholder" value="Please fill in the English title of the paper"/>
+                    <property name="title" value="English title of the paper"/>
+                    <property name="type" value="text"/>
+                    <property name="multiply" value="1:1"/>
+                    <property name="iri" value="https://schema.org/paperName"/>
+                    <property name="language" value="en"/>
+                </bean>
+                <bean>
+                    <property name="title" value="Chinese keywords"/>
+                    <property name="type" value="textTabMany"/>
+                    <property name="multiply" value="1:*"/>
+                    <property name="iri" value="https://schema.org/paperKeywords"/>
+                    <property name="language" value="zh"/>
+                    <property name="placeholder" value="Please fill in Chinese keywords"/>
+                </bean>
+                <bean>
+                    <property name="title" value="English keywords"/>
+                    <property name="type" value="textTabMany"/>
+                    <property name="multiply" value="1:*"/>
+                    <property name="iri" value="https://schema.org/paperKeywords"/>
+                    <property name="language" value="en"/>
+                    <property name="placeholder" value="Please fill in English keywords"/>
+                </bean>
+                <bean>
+                    <property name="name" value="researchType"/>
+                    <property name="placeholder" value="Please select a research type"/>
+                    <property name="title" value="Research type"/>
+                    <property name="type" value="select"/>
+                    <property name="multiply" value="1:1"/>
+                    <property name="iri" value="https://schema.org/researchType"/>
+                    <property name="language" value="zh"/>
+                    <property name="options">
+                        <list>
+                            <bean>
+                                <property name="name" value="fundamental research"/>
+                                <property name="title" value="fundamental research"/>
+                            </bean>
+                            <bean>
+                                <property name="name" value="application research"/>
+                                <property name="title" value="application research"/>
+                            </bean>
+                            <bean>
+                                <property name="name" value="Evaluation research"/>
+                                <property name="title" value="Evaluation research"/>
+                            </bean>
+                            <bean>
+                                <property name="name" value="Action research and orientation research"/>
+                                <property name="title" value="Action research and orientation research"/>
+                            </bean>
+                        </list>
+                    </property>
+                </bean>
+                <bean>
+                    <property name="name" value="topicSource"/>
+                    <property name="placeholder" value="Please select the source of the paper topic selection"/>
+                    <property name="title" value="Source of Thesis Topic"/>
+                    <property name="type" value="select"/>
+                    <property name="multiply" value="1:1"/>
+                    <property name="iri" value="https://schema.org/topicSource"/>
+                    <property name="language" value="zh"/>
+                    <property name="options">
+                        <list>
+                            <bean>
+                                <property name="name" value="Laboratory or research group"/>
+                                <property name="title" value="Laboratory or research group"/>
+                            </bean>
+                            <bean>
+                                <property name="name" value="other"/>
+                                <property name="title" value="other"/>
+                            </bean>
+                        </list>
+                    </property>
+                </bean>
+                <bean>
+                    <property name="placeholder" value="Please fill in the Chinese abstract of the paper"/>
+                    <property name="title" value="Chinese abstract of the paper"/>
+                    <property name="type" value="textarea"/>
+                    <property name="multiply" value="1:1"/>
+                    <property name="iri" value="https://schema.org/paperAbstracts"/>
+                    <property name="language" value="zh"/>
+                </bean>
+                <bean>
+                    <property name="placeholder" value="Please fill in the English abstract of the paper"/>
+                    <property name="title" value="English abstract of the paper"/>
+                    <property name="type" value="textarea"/>
+                    <property name="multiply" value="1:1"/>
+                    <property name="iri" value="https://schema.org/paperAbstracts"/>
+                    <property name="language" value="en"/>
+                </bean>
+            </list>
+        </group>
+        <group value="Dataset related" desc="Dataset related">
+            <list>
+                <bean>
+                    <property name="placeholder" value="Please fill in the Chinese title of the dataset"/>
+                    <property name="title" value="Dataset Chinese Title"/>
+                    <property name="type" value="text"/>
+                    <property name="multiply" value="1:1"/>
+                    <property name="iri" value="https://schema.org/name"/>
+                    <property name="language" value="zh"/>
+                </bean>
+                <bean>
+                    <property name="placeholder" value="Please fill in the English title of the dataset"/>
+                    <property name="title" value="Dataset English Title"/>
+                    <property name="type" value="text"/>
+                    <property name="multiply" value="1:1"/>
+                    <property name="iri" value="https://schema.org/name"/>
+                    <property name="language" value="en"/>
+                </bean>
+                <bean>
+                    <property name="title" value="Dataset Description"/>
+                    <property name="placeholder" value="Please fill in the dataset description"/>
+                    <property name="type" value="textarea"/>
+                    <property name="multiply" value="1:1"/>
+                    <property name="iri" value="https://schema.org/description"/>
+                    <property name="language" value="zh"/>
+                </bean>
+                <bean>
+                    <property name="title" value="keyword"/>
+                    <property name="type" value="textTabMany"/>
+                    <property name="multiply" value="1:*"/>
+                    <property name="iri" value="https://schema.org/keywords"/>
+                    <property name="placeholder" value="Please fill in the keywords"/>
+                    <property name="language" value="zh"/>
+                </bean>
+                <bean>
+                    <property name="name" value="privacyPolicy"/>
+                    <property name="title" value="Sharing method"/>
+                    <property name="type" value="privacyPolicy"/>
+                    <property name="multiply" value="1:1"/>
+                    <property name="iri" value="https://schema.org/privacyPolicy"/>
+                    <property name="language" value="zh"/>
+                    <property name="options">
+                        <list>
+                            <bean>
+                                <property name="name" value="notOpen"/>
+                                <property name="title" value="Only share metadata"/>
+                                <property name="children">
+                                    <list>
+                                        <bean>
+                                            <property name="name" value="condition" />
+                                            <property name="type" value="textarea" />
+                                            <property name="title" value="Only share metadata description" />
+                                        </bean>
+                                    </list>
+                                </property>
+                            </bean>
+                        </list>
+                    </property>
+                </bean>
+            </list>
+        </group>
+    </property>
+</beans>

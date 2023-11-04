@@ -1,0 +1,593 @@
+<?xml version="1.0" encoding="utf-8"?>
+<beans>
+    <property name="name" value="Stem cell adaptation templateV1"/>
+    <property name="desc" value="describe"/>
+    <property name="version" value="V1"/>
+    <property name="author" value="dcscr"/>
+    <!--Root node -->
+    <property name="root">
+        <group value="Basic information" desc="Basic information">
+            <list>
+                <bean>
+                    <property name="name" value="resourcesNameZh"/>
+                    <property name="placeholder" value="Please fill in the Chinese resource name，Please fill in the Chinese resource name150Please fill in the Chinese resource name"/>
+                    <property name="title" value="Resource Name（Resource Name）"/>
+                    <property name="type" value="text"/>
+                    <property name="check" value="^.{1,150}$"/>
+                    <property name="multiply" value="1:1"/>
+                    <property name="iri" value="https://schema.org/name"/>
+                    <property name="language" value="zh"/>
+                </bean>
+                <bean>
+                    <property name="name" value="resourcesNameEn"/>
+                    <property name="title" value="Resource Name（Resource Name）"/>
+                    <property name="placeholder" value="Please fill in the English resource name，Please fill in the English resource name300Please fill in the English resource name"/>
+                    <property name="type" value="text"/>
+                    <property name="check" value="^.{1,300}$"/>
+                    <property name="multiply" value="1:1"/>
+                    <property name="iri" value="https://schema.org/name"/>
+                    <property name="language" value="en"/>
+                </bean>
+                <bean>
+                    <property name="name" value="resourcesDescZh"/>
+                    <property name="title" value="Resource Description（Resource Description）"/>
+                    <property name="placeholder" value="Only Chinese resource descriptions can be filled in，Only Chinese resource descriptions can be filled in100Only Chinese resource descriptions can be filled in，300Only Chinese resource descriptions can be filled in"/>
+                    <property name="type" value="textarea"/>
+                    <property name="multiply" value="1:1"/>
+                    <property name="iri" value="https://schema.org/description"/>
+                    <property name="language" value="zh"/>
+                    <property name="check" value="^.{100,300}$"/>
+                </bean>
+                <bean>
+                    <property name="name" value="resourcesDescEn"/>
+                    <property name="title" value="Resource Description（Resource Description）"/>
+                    <property name="type" value="textarea"/>
+                    <property name="multiply" value="0:1"/>
+                    <property name="iri" value="https://schema.org/description"/>
+                    <property name="language" value="en"/>
+                    <property name="check" value="^.{100,500}$"/>
+                    <property name="placeholder" value="Only English resource descriptions can be filled in，Only English resource descriptions can be filled in100Only English resource descriptions can be filled in，500Only English resource descriptions can be filled in"/>
+                </bean>
+                <bean>
+                    <property name="name" value="keywordZh"/>
+                    <property name="title" value="keyword（keyword）"/>
+                    <property name="type" value="textTabMany"/>
+                    <property name="multiply" value="1:3"/>
+                    <property name="iri" value="https://schema.org/keywords"/>
+                    <property name="language" value="zh"/>
+                    <property name="tag" value="keywordZh"/>
+                    <property name="check" value="^[\u4e00-\u9fa5]{0,}$"/>
+                    <property name="placeholder" value="Please fill in Chinese keywords，Please fill in Chinese keywords，Please fill in Chinese keywords"/>
+                </bean>
+                <bean>
+                    <property name="name" value="keywordEn"/>
+                    <property name="title" value="keyword（keyword）"/>
+                    <property name="type" value="textTabMany"/>
+                    <property name="multiply" value="3:5"/>
+                    <property name="iri" value="https://schema.org/keywords"/>
+                    <property name="language" value="en"/>
+                    <property name="tag" value="keywordEn"/>
+                    <property name="check" value="^[A-Za-z]+$"/>
+                    <property name="placeholder" value="Please fill in English keywords，Please fill in English keywords，Please fill in English keywords"/>
+                </bean>
+                <bean>
+                    <property name="name" value="project"/>
+                    <property name="title" value="special"/>
+                    <property name="type" value="selectGetUrl"/>
+                    <property name="url"  value="http://127.0.0.1:81/subject"/>
+                    <property name="multiply" value="1:1"/>
+                    <property name="iri" value="http://purl.org/dc/terms/project"/>
+                    <property name="placeholder" value="Please select a topic or enter a topic name to search for，Please select a topic or enter a topic name to search for"/>
+                </bean>
+                <bean>
+                    <property name="name" value="author"/>
+                    <property name="title" value="author"/>
+                    <property name="type" value="author"/>
+                    <property name="multiply" value="1:1"/>
+                    <property name="iri" value="https://schema.org/author"/>
+                    <property name="placeholder" value="Please enter a name to search for the author"/>
+                </bean>
+                <bean>
+                    <property name="name" value="contributor"/>
+                    <property name="title" value="contacts"/>
+                    <property name="type" value="author"/>
+                    <property name="multiply" value="1:3"/>
+                    <property name="iri" value="https://schema.org/contributor"/>
+                    <property name="placeholder" value="Please enter a name to search for a contact person"/>
+                </bean>
+                <bean>
+                    <property name="name" value="image"/>
+                    <property name="title" value="Topic Cover"/>
+                    <property name="type" value="image"/>
+                    <property name="multiply" value="1:1"/>
+                    <property name="iri" value="https://schema.org/image"/>
+                    <property name="placeholder" value="Size range800*600，Size range1MB"/>
+                    <property name="check" value="*#800-*:600-*#0-1024"/>
+                </bean>
+                <bean>
+                    <property name="name" value="issueNumber"/>
+                    <property name="title" value="Project number"/>
+                    <property name="type" value="text"/>
+                    <property name="multiply" value="1:1"/>
+                    <property name="iri" value="https://schema.org/issueNumber"/>
+                    <property name="placeholder" value="Please fill in the project number"/>
+                </bean>
+                <bean>
+                    <property name="name" value="DOI"/>
+                    <property name="title" value="DOI"/>
+                    <property name="type" value="DOI"/>
+                    <property name="multiply" value="1:1"/>
+                    <property name="iri" value="https://schema.org/doi"/>
+                    <property name="placeholder" value="Please fill indoi"/>
+                    <property name="check" value="^.{0,150}$"/>
+                </bean>
+
+                <bean>
+                    <property name="title" value="External Database"/>
+                    <property name="type" value="textsMany"/>
+                    <property name="multiply" value="1:3"/>
+                    <property name="iri" value="https://schema.org/externalDatabase"/>
+                    <property name="placeholder" value="Please add external database information"/>
+                    <property name="options">
+                        <list>
+                            <bean>
+                                <property name="name" value="name"/>
+                                <property name="title" value="name"/>
+                                <property name="type" value="text"/>
+                                <property name="multiply" value="1:1"/>
+                                <property name="iri" value="https://schema.org/name"/>
+                                <property name="placeholder" value="Please enter a name"/>
+                            </bean>
+                            <bean>
+                                <property name="name" value="value"/>
+                                <property name="title" value="address"/>
+                                <property name="type" value="text"/>
+                                <property name="multiply" value="1:1"/>
+                                <property name="iri" value="https://schema.org/value"/>
+                                <property name="placeholder" value="Please fill in the address"/>
+                            </bean>
+                        </list>
+                    </property>
+                </bean>
+
+
+                <bean>
+                    <property name="name" value="PMID"/>
+                    <property name="title" value="PMID"/>
+                    <property name="type" value="text"/>
+                    <property name="multiply" value="0:1"/>
+                    <property name="iri" value="https://schema.org/pmid"/>
+                    <property name="placeholder" value="Please fill inPMID"/>
+                    <property name="check" value="^.{0,150}$"/>
+                </bean>
+                <bean>
+                    <property name="name" value="privacyPolicy"/>
+                    <property name="title" value="Privacy Policy"/>
+                    <property name="type" value="privacyPolicy"/>
+                    <!--1:* 1To many To many   0:1 0To many1 To many  1:1 To many  -->
+                    <property name="multiply" value="1:1"/>
+                    <!-- Corresponding group name Corresponding group name，Corresponding group name，Corresponding group name-->
+                    <property name="iri" value="https://schema.org/privacyPolicy"/>
+                    <!--Child nodes -->
+                    <property name="options">
+                        <list>
+                            <bean>
+                                <property name="name" value="open"/>
+                                <property name="title" value="Open"/>
+                            </bean>
+                            <bean>
+                                <property name="name" value="protect"/>
+                                <property name="title" value="Protection period"/>
+                                <property name="children">
+                                    <list>
+                                        <bean>
+                                            <property name="name" value="openDate"/>
+                                            <property name="type" value="date"/>
+                                            <property name="formate" value="yyyy-MM-dd"/>
+                                            <property name="title" value="Opening date"/>
+                                        </bean>
+                                    </list>
+                                </property>
+                            </bean>
+                            <bean>
+                                <property name="name" value="condition"/>
+                                <property name="title" value="Restricted Access"/>
+                                <property name="children">
+                                    <list>
+                                        <bean>
+                                            <property name="name" value="condition"/>
+                                            <property name="type" value="textarea"/>
+                                            <property name="title" value="Access conditions"/>
+                                        </bean>
+                                    </list>
+                                </property>
+                            </bean>
+                            <bean>
+                                <property name="name" value="notOpen"/>
+                                <property name="title" value="Not open"/>
+                            </bean>
+                        </list>
+                    </property>
+                </bean>
+                <bean>
+                    <!-- Corresponding English -->
+                    <property name="name" value="licenseAgreement"/>
+                    <property name="title" value="license agreement"/>
+                    <property name="type" value="license"/>
+                    <property name="multiply" value="1:1"/>
+                    <property name="iri" value="https://schema.org/license"/>
+                    <property name="placeholder" value="Please select a license agreement"/>
+                </bean>
+            </list>
+        </group>
+        <group value="Sample information" desc="Sample information">
+            <list>
+                <bean>
+                    <property name="name" value="sequencing"/>
+                    <property name="title" value="Sample sequencing data"/>
+                    <property name="type" value="table"/>
+                    <!--1:* 1To many To many   0:1 0To many1 To many  1:1 To many  -->
+                    <property name="multiply" value="0:*"/>
+                    <!-- Corresponding group name Corresponding group name，Corresponding group name，Corresponding group name-->
+                    <property name="iri" value="https://schema.org/sequencing"/>
+                    <!-- Add Modify Node -->
+                    <property name="show">
+                        <list>
+                            <bean>
+                                <property name="name" value="number"/>
+                                <property name="title" value="Sample number"/>
+                            </bean>
+                            <bean>
+                                <property name="name" value="name"/>
+                                <property name="title" value="Sample Name"/>
+                            </bean>
+                            <bean>
+                                <property name="name" value="species"/>
+                                <property name="title" value="species"/>
+                            </bean>
+                            <bean>
+                                <property name="name" value="strain"/>
+                                <property name="title" value="Strain"/>
+                            </bean>
+                            <bean>
+                                <property name="name" value="organ"/>
+                                <property name="title" value="Organs and tissues"/>
+                            </bean>
+                            <bean>
+                                <property name="name" value="cells"/>
+                                <property name="title" value="Cell type"/>
+                            </bean>
+                            <bean>
+                                <property name="name" value="sex"/>
+                                <property name="title" value="Gender"/>
+                            </bean>
+                            <bean>
+                                <property name="name" value="age"/>
+                                <property name="title" value="Age/Age"/>
+                            </bean>
+                            <bean>
+                                <property name="name" value="interpose"/>
+                                <property name="title" value="intervene"/>
+                            </bean>
+                            <bean>
+                                <property name="name" value="processDescription"/>
+                                <property name="title" value="Database building process and steps"/>
+                            </bean>
+                            <bean>
+                                <property name="name" value="platform"/>
+                                <property name="title" value="Sequencing platform"/>
+                            </bean>
+                            <bean>
+                                <property name="name" value="type"/>
+                                <property name="title" value="Sequencing type"/>
+                            </bean>
+                            <bean>
+                                <property name="name" value="omics"/>
+                                <property name="title" value="Omics"/>
+                            </bean>
+                            <bean>
+                                <property name="name" value="originalData"/>
+                                <property name="title" value="raw data"/>
+                            </bean>
+                            <bean>
+                                <property name="type" value="update"/>
+                                <property name="url" value="update"/>
+                                <property name="title" value="edit"/>
+                                <property name="children" >
+                                    <list>
+                                        <bean>
+                                            <property name="name" value="name"/>
+                                            <property name="title" value="Sample Name"/>
+                                            <property name="type" value="text"/>
+                                            <property name="multiply" value="1:1"/>
+                                            <property name="placeholder" value="Please fill in the sample name"/>
+                                        </bean>
+                                        <bean>
+                                            <property name="name" value="species"/>
+                                            <property name="type" value="selectGetUrl"/>
+                                            <property name="url" value="http://127.0.0.1:81/api/dictionary?type=species.name"/>
+                                            <property name="title" value="species"/>
+                                            <property name="multiply" value="1:1"/>
+                                            <property name="placeholder" value="Please select a species or enter a species name to search for，Please select a species or enter a species name to search for"/>
+                                        </bean>
+                                        <bean>
+                                            <property name="name" value="strain"/>
+                                            <property name="title" value="Strain"/>
+                                            <property name="type" value="text"/>
+                                            <property name="multiply" value="1:1"/>
+                                            <property name="placeholder" value="Please fill in the product line"/>
+                                        </bean>
+                                        <bean>
+                                            <property name="name" value="organ"/>
+                                            <property name="type" value="selectGetUrl"/>
+                                            <property name="url" value="http://127.0.0.1:81/api/dictionary?type=organs.name"/>
+                                            <property name="title" value="Organs and tissues"/>
+                                            <property name="multiply" value="1:1"/>
+                                            <property name="placeholder" value="Please select a tissue organ or enter a tissue organ name to search for，Please select a tissue organ or enter a tissue organ name to search for"/>
+                                        </bean>
+                                        <bean>
+                                            <property name="name" value="cells"/>
+                                            <property name="type" value="selectGetUrl"/>
+                                            <property name="url" value="http://127.0.0.1:81/api/dictionary?type=cells.name"/>
+                                            <property name="title" value="Cell type"/>
+                                            <property name="multiply" value="1:1"/>
+                                            <property name="placeholder" value="Please select a cell type or enter a cell type name to search for，Please select a cell type or enter a cell type name to search for"/>
+                                        </bean>
+                                        <bean>
+                                            <property name="name" value="sex"/>
+                                            <property name="type" value="selectGetUrl"/>
+                                            <property name="url" value="http://127.0.0.1:81/api/dictionary?type=gender"/>
+                                            <property name="title" value="Gender"/>
+                                            <property name="multiply" value="1:1"/>
+                                            <property name="placeholder" value="Please select gender，Please select gender"/>
+                                        </bean>
+                                        <bean>
+                                            <property name="name" value="age"/>
+                                            <property name="title" value="Age/Age"/>
+                                            <property name="type" value="text"/>
+                                            <property name="multiply" value="1:1"/>
+                                            <property name="placeholder" value="Please fill in the age/Please fill in the age"/>
+                                        </bean>
+                                        <bean>
+                                            <property name="name" value="interpose"/>
+                                            <property name="title" value="intervene"/>
+                                            <property name="type" value="textarea"/>
+                                            <property name="multiply" value="1:1"/>
+                                            <property name="placeholder" value="Please fill in the intervention"/>
+                                        </bean>
+                                        <bean>
+                                            <property name="name" value="processDescription"/>
+                                            <property name="title" value="Database building process and steps"/>
+                                            <property name="type" value="textarea"/>
+                                            <property name="multiply" value="1:1"/>
+                                            <property name="placeholder" value="Please fill in the process and steps of building a database"/>
+                                        </bean>
+                                        <bean>
+                                            <property name="name" value="platform"/>
+                                            <property name="title" value="Sequencing platform"/>
+                                            <property name="type" value="text"/>
+                                            <property name="multiply" value="1:1"/>
+                                            <property name="placeholder" value="Please fill in the sequencing platform"/>
+                                        </bean>
+                                        <bean>
+                                            <property name="name" value="type"/>
+                                            <property name="type" value="selectGetUrl"/>
+                                            <property name="url" value="http://127.0.0.1:81/api/dictionary?type=seqType"/>
+                                            <property name="title" value="Sequencing type"/>
+                                            <property name="multiply" value="1:1"/>
+                                            <property name="placeholder" value="Please select a sequencing type or enter a sequencing type name to search for，Please select a sequencing type or enter a sequencing type name to search for"/>
+                                        </bean>
+                                        <bean>
+                                            <property name="name" value="omics"/>
+                                            <property name="type" value="selectGetUrl"/>
+                                            <property name="url" value="http://127.0.0.1:81/api/dictionary?type=omics.name"/>
+                                            <property name="title" value="Omics"/>
+                                            <property name="multiply" value="1:1"/>
+                                            <property name="placeholder" value="Please select a group name or enter a group name to search for，Please select a group name or enter a group name to search for"/>
+                                        </bean>
+                                        <bean>
+                                            <property name="name" value="originalData"/>
+                                            <property name="type" value="dataspace"/>
+                                            <property name="title" value="raw data"/>
+                                            <property name="multiply" value="0:*"/>
+                                            <property name="placeholder" value="Please select a file"/>
+                                        </bean>
+                                    </list>
+                                </property>
+                            </bean>
+                            <bean>
+                                <property name="type" value="delete"/>
+                                <property name="url" value="name"/>
+                                <property name="title" value="delete"/>
+                                <property name="placeholder" value="Are you sure you want to delete it？"/>
+                                <!-- inquiry Inquiry box Inquiry boxplaceholder  Inquiry boxurl  -->
+                                <property name="mode" value="inquiry"/>
+                            </bean>
+                        </list>
+                    </property>
+                    <property name="operation">
+                        <list>
+                            <bean>
+                                <property name="type" value="save"/>
+                                <property name="url" value="Addrul"/>
+                                <property name="title" value="Add"/>
+                                <property name="children" >
+                                    <list>
+                                        <bean>
+                                            <property name="name" value="name"/>
+                                            <property name="title" value="Sample Name"/>
+                                            <property name="type" value="text"/>
+                                            <property name="multiply" value="1:1"/>
+                                            <property name="placeholder" value="Please fill in the sample name"/>
+                                        </bean>
+                                        <bean>
+                                            <property name="name" value="species"/>
+                                            <property name="type" value="selectGetUrl"/>
+                                            <property name="url" value="http://127.0.0.1:81/api/dictionary?type=species.name"/>
+                                            <property name="title" value="species"/>
+                                            <property name="multiply" value="1:1"/>
+                                            <property name="placeholder" value="Please select a species or enter a species name to search for，Please select a species or enter a species name to search for"/>
+                                        </bean>
+                                        <bean>
+                                            <property name="name" value="strain"/>
+                                            <property name="title" value="Strain"/>
+                                            <property name="type" value="text"/>
+                                            <property name="multiply" value="1:1"/>
+                                            <property name="placeholder" value="Please fill in the product line"/>
+                                        </bean>
+                                        <bean>
+                                            <property name="name" value="organ"/>
+                                            <property name="type" value="selectGetUrl"/>
+                                            <property name="url" value="http://127.0.0.1:81/api/dictionary?type=organs.name"/>
+                                            <property name="title" value="Organs and tissues"/>
+                                            <property name="multiply" value="1:1"/>
+                                            <property name="placeholder" value="Please select a tissue organ or enter a tissue organ name to search for，Please select a tissue organ or enter a tissue organ name to search for"/>
+                                        </bean>
+                                        <bean>
+                                            <property name="name" value="cells"/>
+                                            <property name="type" value="selectGetUrl"/>
+                                            <property name="url" value="http://127.0.0.1:81/api/dictionary?type=cells.name"/>
+                                            <property name="title" value="Cell type"/>
+                                            <property name="multiply" value="1:1"/>
+                                            <property name="placeholder" value="Please select a cell type or enter a cell type name to search for，Please select a cell type or enter a cell type name to search for"/>
+                                        </bean>
+                                        <bean>
+                                            <property name="name" value="sex"/>
+                                            <property name="type" value="selectGetUrl"/>
+                                            <property name="url" value="http://127.0.0.1:81/api/dictionary?type=gender"/>
+                                            <property name="title" value="Gender"/>
+                                            <property name="multiply" value="1:1"/>
+                                            <property name="placeholder" value="Please select gender，Please select gender"/>
+                                        </bean>
+                                        <bean>
+                                            <property name="name" value="age"/>
+                                            <property name="title" value="Age/Age"/>
+                                            <property name="type" value="text"/>
+                                            <property name="multiply" value="1:1"/>
+                                            <property name="placeholder" value="Please fill in the age/Please fill in the age"/>
+                                        </bean>
+                                        <bean>
+                                            <property name="name" value="interpose"/>
+                                            <property name="title" value="intervene"/>
+                                            <property name="type" value="textarea"/>
+                                            <property name="multiply" value="1:1"/>
+                                            <property name="placeholder" value="Please fill in the intervention"/>
+                                        </bean>
+                                        <bean>
+                                            <property name="name" value="processDescription"/>
+                                            <property name="title" value="Database building process and steps"/>
+                                            <property name="type" value="textarea"/>
+                                            <property name="multiply" value="1:1"/>
+                                            <property name="placeholder" value="Please fill in the process and steps of building a database"/>
+                                        </bean>
+                                        <bean>
+                                            <property name="name" value="platform"/>
+                                            <property name="title" value="Sequencing platform"/>
+                                            <property name="type" value="text"/>
+                                            <property name="multiply" value="1:1"/>
+                                            <property name="placeholder" value="Please fill in the sequencing platform"/>
+                                        </bean>
+                                        <bean>
+                                            <property name="name" value="type"/>
+                                            <property name="type" value="selectGetUrl"/>
+                                            <property name="url" value="http://127.0.0.1:81/api/dictionary?type=seqType"/>
+                                            <property name="title" value="Sequencing type"/>
+                                            <property name="multiply" value="1:1"/>
+                                            <property name="placeholder" value="Please select a sequencing type or enter a sequencing type name to search for，Please select a sequencing type or enter a sequencing type name to search for"/>
+                                        </bean>
+                                        <bean>
+                                            <property name="name" value="omics"/>
+                                            <property name="type" value="selectGetUrl"/>
+                                            <property name="url" value="http://127.0.0.1:81/api/dictionary?type=omics.name"/>
+                                            <property name="title" value="Omics"/>
+                                            <property name="multiply" value="1:1"/>
+                                            <property name="placeholder" value="Please select a group name or enter a group name to search for，Please select a group name or enter a group name to search for"/>
+                                        </bean>
+                                        <bean>
+                                            <property name="name" value="originalData"/>
+                                            <property name="type" value="dataspace"/>
+                                            <property name="title" value="raw data"/>
+                                            <property name="multiply" value="0:*"/>
+                                            <property name="placeholder" value="Please select a file"/>
+                                        </bean>
+                                    </list>
+                                </property>
+                            </bean>
+                            <bean>
+                                <property name="type" value="batchImport"/>
+                                <property name="name" value="number"/>
+                                <property name="url" value="number"/>
+                                <property name="title" value="Batch Import"/>
+                            </bean>
+                        </list>
+                    </property>
+                </bean>
+            </list>
+        </group>
+        <group value="Attachment Information" desc="Attachment Information">
+            <list>
+                <bean>
+                    <property name="name" value="enclosure"/>
+                    <property name="title" value="attachment"/>
+                    <property name="type" value="table"/>
+                    <property name="multiply" value="0:*"/>
+                    <property name="iri" value="https://schema.org/enclosure"/>
+                    <property name="operation">
+                        <list>
+                            <bean>
+                                <property name="type" value="button"/>
+                                <property name="name" value="number"/>
+                                <property name="title" value="Add"/>
+                                <property name="children" >
+                                    <list>
+                                        <bean>
+                                            <property name="name" value="file"/>
+                                            <property name="title" value="Attachment Data"/>
+                                            <property name="type" value="dataspace"/>
+                                            <property name="multiply" value="1:*"/>
+                                            <property name="placeholder" value="Please select a file"/>
+                                        </bean>
+                                        <bean>
+                                            <property name="name" value="remark"/>
+                                            <property name="title" value="File Description"/>
+                                            <property name="type" value="textarea"/>
+                                            <property name="multiply" value="1:1"/>
+                                            <property name="placeholder" value="Please fill in the document description"/>
+                                        </bean>
+                                    </list>
+                                </property>
+                            </bean>
+                        </list>
+                    </property>
+                    <property name="show">
+                        <list>
+                            <bean>
+                                <property name="name" value="name"/>
+                                <property name="title" value="File Name"/>
+                            </bean>
+                            <bean>
+                                <property name="name" value="remark"/>
+                                <property name="title" value="File Description"/>
+                            </bean>
+                            <bean>
+                                <property name="name" value="size"/>
+                                <property name="title" value="size"/>
+                            </bean>
+                        </list>
+                    </property>
+                </bean>
+            </list>
+        </group>
+        <group value="Usage" desc="Usage">
+            <list>
+                <bean>
+                    <property name="name" value="other"/>
+                    <property name="title" value="other"/>
+                    <property name="type" value="text"/>
+                    <property name="multiply" value="1:1"/>
+                    <property name="iri" value="https://schema.org/other"/>
+                </bean>
+            </list>
+        </group>
+    </property>
+</beans>
